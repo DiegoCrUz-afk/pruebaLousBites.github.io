@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="post-content">
               <p class="fecha">${new Date(post.fecha_publicacion + 'T12:00:00').toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
               <p>${post.texto || ''}</p>
-              ${post.precio ? `<p class="precio" style="margin-top:0.5rem;">$${parseFloat(post.precio).toFixed(2)}</p>` : ''}
+              ${post.precio ? `<p class="precio" style="margin-top:0.5rem;">Q${post.precio}</p>` : ''}
             </div>
           </div>
         `).join('');
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="card-body">
               <h3>${p.nombre}</h3>
               <p style="color:var(--texto-claro);margin-bottom:0.5rem;">${p.descripcion || ''}</p>
-              <p class="precio">$${parseFloat(p.precio).toFixed(2)}</p>
+              <p class="precio">Q${p.precio}</p>
             </div>
           </div>
         `).join('');
@@ -101,7 +101,7 @@ async function abrirModalProducto(id) {
       }
       <h2 style="color:var(--cafe-oscuro);margin-bottom:0.5rem;">${p.nombre}</h2>
       <p style="color:var(--texto-claro);margin-bottom:1rem;">${p.descripcion || 'Sin descripción'}</p>
-      <p style="font-size:1.5rem;font-weight:bold;color:var(--rosa-oscuro);">$${parseFloat(p.precio).toFixed(2)}</p>
+      <p style="font-size:1.5rem;font-weight:bold;color:var(--rosa-oscuro);">Q${p.precio}</p>
     `;
     document.getElementById('producto-modal').classList.add('active');
   } catch (e) {

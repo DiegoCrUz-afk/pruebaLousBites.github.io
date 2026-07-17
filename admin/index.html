@@ -220,7 +220,7 @@ const COLLECTIONS = {
       { name: 'id', label: 'ID', type: 'number' },
       { name: 'nombre', label: 'Nombre', type: 'string', required: true },
       { name: 'descripcion', label: 'Descripción', type: 'text' },
-      { name: 'precio', label: 'Precio ($)', type: 'number', step: '0.01' },
+      { name: 'precio', label: 'Precio (Q)', type: 'string' },
       { name: 'imagen_url', label: 'Imagen', type: 'string', widget: 'image' },
       { name: 'disponible', label: 'Disponible', type: 'boolean' },
     ],
@@ -233,7 +233,7 @@ const COLLECTIONS = {
       { name: 'id', label: 'ID', type: 'number' },
       { name: 'imagen_url', label: 'Imagen', type: 'string', widget: 'image' },
       { name: 'texto', label: 'Texto', type: 'text' },
-      { name: 'precio', label: 'Precio ($)', type: 'number', step: '0.01' },
+      { name: 'precio', label: 'Precio (Q)', type: 'string' },
       { name: 'fecha_publicacion', label: 'Fecha', type: 'date', required: true },
     ],
   },
@@ -294,10 +294,10 @@ function setStatus(text, cls = '') {
   statusText.textContent = text;
 }
 
-function clr(name, value) {
-  if (value === undefined || value === null) return '';
-  if (typeof value === 'boolean') return value ? '✅ Sí' : '❌ No';
-  return String(value);
+function clr(val) {
+  if (val === undefined || val === null) return '';
+  if (typeof val === 'boolean') return val ? '✅ Sí' : '❌ No';
+  return String(val);
 }
 
 // ─── API ───
