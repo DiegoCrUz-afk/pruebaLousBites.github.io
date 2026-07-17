@@ -4,16 +4,16 @@
       "id": null,
       "nombre": "Churro Bite",
       "descripcion": "",
-      "precio": 9.68,
+      "precio": "9.68",
       "imagen_url": "images/uploads/1784328509923_Los_mejores_brownies.png",
       "disponible": true
     },
     {
       "id": null,
-      "nombre": "",
-      "descripcion": "",
-      "precio": null,
-      "imagen_url": "",
+      "nombre": "jaonfkaada",
+      "descripcion": "afaf",
+      "precio": "9",
+      "imagen_url": "images/uploads/1784325719190_1000133885.png",
       "disponible": true
     }
   ]
