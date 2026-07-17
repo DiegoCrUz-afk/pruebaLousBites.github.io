@@ -1,0 +1,97 @@
+# ──────────────────────────────────────
+# LOUSBITE — Configuración de Decap CMS
+# ──────────────────────────────────────
+# Cuando subas esto a GitHub, configurá:
+#   repo: TU_USUARIO/NOMBRE_DEL_REPO
+#   branch: main (o master)
+# ──────────────────────────────────────
+
+backend:
+  name: github
+  repo: diegocruz-afk/pruebaLousBites.github.io
+  branch: main
+  base_url: https://oauth.decapcms.com
+
+# Carpeta donde se guardan las imágenes subidas
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# ─── COLECCIONES ──────────────────────
+
+collections:
+  - name: "productos"
+    label: "📦 Productos"
+    description: "Administrá los productos del catálogo"
+    files:
+      - name: "productos_data"
+        label: "Productos"
+        file: "data/productos.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - name: "lista"
+            label: "Lista de productos"
+            widget: "list"
+            hint: "Agregá, editá o eliminá productos"
+            fields:
+              - { label: "ID", name: "id", widget: "number", hint: "Número único del producto" }
+              - { label: "Nombre", name: "nombre", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text", required: false }
+              - { label: "Precio ($)", name: "precio", widget: "number", value_type: "float", hint: "Ej: 3.50" }
+              - { label: "Imagen", name: "imagen_url", widget: "image", required: false, hint: "Subí una foto del producto" }
+              - { label: "Disponible", name: "disponible", widget: "boolean", default: true }
+
+  - name: "posts"
+    label: "📝 Posts"
+    description: "Posts que aparecen en la página principal (timeline)"
+    files:
+      - name: "posts_data"
+        label: "Posts"
+        file: "data/posts.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - name: "lista"
+            label: "Lista de posts"
+            widget: "list"
+            hint: "Agregá, editá o eliminá posts del timeline"
+            fields:
+              - { label: "ID", name: "id", widget: "number" }
+              - { label: "Imagen", name: "imagen_url", widget: "image", required: false }
+              - { label: "Texto", name: "texto", widget: "text", required: false }
+              - label: "Precio ($)"
+                name: "precio"
+                widget: "number"
+                value_type: "float"
+                required: false
+                hint: "Dejá vacío si no aplica"
+              - { label: "Fecha de publicación", name: "fecha_publicacion", widget: "date", format: "YYYY-MM-DD" }
+
+  - name: "calendario"
+    label: "📅 Calendario"
+    description: "Días de venta, especiales o feriados"
+    files:
+      - name: "calendario_data"
+        label: "Calendario"
+        file: "data/calendario.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - name: "lista"
+            label: "Eventos del calendario"
+            widget: "list"
+            hint: "Agregá, editá o eliminá fechas"
+            fields:
+              - { label: "ID", name: "id", widget: "number" }
+              - { label: "Fecha", name: "fecha", widget: "date", format: "YYYY-MM-DD" }
+              - label: "Tipo"
+                name: "tipo"
+                widget: "select"
+                options:
+                  - { label: "💚 Venta", value: "venta" }
+                  - { label: "💛 Especial", value: "especial" }
+                  - { label: "❤️ Feriado / Sin venta", value: "feriado" }
+              - { label: "Descripción", name: "descripcion", widget: "string", required: false }

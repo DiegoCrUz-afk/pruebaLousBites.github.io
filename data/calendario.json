@@ -1,0 +1,28 @@
+{
+  "lista": [
+    {
+      "id": 1,
+      "fecha": "2026-07-17",
+      "tipo": "venta",
+      "descripcion": "Venta normal — pedidos abiertos"
+    },
+    {
+      "id": 2,
+      "fecha": "2026-07-18",
+      "tipo": "venta",
+      "descripcion": "Venta normal — pedidos abiertos"
+    },
+    {
+      "id": 3,
+      "fecha": "2026-07-19",
+      "tipo": "especial",
+      "descripcion": "Venta especial en Sacrismall"
+    },
+    {
+      "id": 4,
+      "fecha": "2026-07-20",
+      "tipo": "feriado",
+      "descripcion": "Domingo — sin venta"
+    }
+  ]
+}
