@@ -10,7 +10,7 @@ backend:
   name: github
   repo: diegocruz-afk/pruebaLousBites.github.io
   branch: main
-  base_url: https://lousbite-admin.workers.dev
+  base_url: https://lousbite-admin.andululze.workers.dev
   auth_endpoint: /auth
 
 # Carpeta donde se guardan las imágenes subidas
