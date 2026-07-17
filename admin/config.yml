@@ -10,7 +10,8 @@ backend:
   name: github
   repo: diegocruz-afk/pruebaLousBites.github.io
   branch: main
-  base_url: https://oauth.decapcms.com
+  base_url: https://lousbite-admin.workers.dev
+  auth_endpoint: /auth
 
 # Carpeta donde se guardan las imágenes subidas
 media_folder: "images/uploads"
