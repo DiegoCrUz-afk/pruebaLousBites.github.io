@@ -1,39 +1,32 @@
 {
   "lista": [
     {
-      "id": 1,
+      "id": null,
       "imagen_url": "",
-      "texto": "🍪 ¡Hoy horneamos galletas de chocolate frescas! Pedí las tuyas antes de que se acaben.",
-      "precio": 3.50,
-      "fecha_publicacion": "2026-07-17"
-    },
-    {
-      "id": 2,
-      "imagen_url": "",
-      "texto": "✨ Nuevos alfajores de dulce de leche disponibles. Una locura 💛",
-      "precio": 4.00,
-      "fecha_publicacion": "2026-07-16"
-    },
-    {
-      "id": 3,
-      "imagen_url": "",
-      "texto": "📅 Este fin de semana tenemos venta especial en Sacrismall. No te lo pierdas.",
+      "texto": "",
       "precio": null,
-      "fecha_publicacion": "2026-07-15"
+      "fecha_publicacion": ""
     },
     {
-      "id": 4,
+      "id": null,
       "imagen_url": "",
-      "texto": "🧑‍🍳 Detrás de cada galleta hay mucho amor y dedicación. ¡Gracias por preferir Lousbite!",
+      "texto": "",
       "precio": null,
-      "fecha_publicacion": "2026-07-14"
+      "fecha_publicacion": ""
     },
     {
-      "id": 5,
+      "id": null,
       "imagen_url": "",
-      "texto": "💚 Brownie artesanal de chocolate con nueces. Ideal para compartir (o no 😋).",
-      "precio": 5.00,
-      "fecha_publicacion": "2026-07-13"
+      "texto": "",
+      "precio": null,
+      "fecha_publicacion": ""
+    },
+    {
+      "id": null,
+      "imagen_url": "",
+      "texto": "",
+      "precio": null,
+      "fecha_publicacion": ""
     }
   ]
 }
