@@ -205,9 +205,6 @@
 <!-- ─── Toast ─── -->
 <div class="toast" id="toast"></div>
 
-<!-- ─── File input oculto para subir imágenes ─── -->
-<input type="file" id="file-input" accept="image/*" style="display:none" />
-
 <script>
 const API = 'https://lousbite-admin.andululze.workers.dev';
 
@@ -518,7 +515,10 @@ function renderItems() {
           <label for="f-${idx}-${f.name}">${f.label}</label>
           <div style="display:flex;gap:.5rem">
             <input type="text" id="f-${idx}-${f.name}" name="${f.name}" value="${clr(val).replace(/"/g, '&quot;')}" style="flex:1" placeholder="URL o subí una imagen" />
-            <button type="button" class="btn btn-outline upload-btn" data-idx="${idx}" data-field="${f.name}" style="white-space:nowrap">📁 Subir</button>
+            <label class="btn btn-outline" style="cursor:pointer;white-space:nowrap">
+              📁 Subir
+              <input type="file" accept="image/*" style="display:none" class="img-picker" data-idx="${idx}" data-field="${f.name}" />
+            </label>
           </div>
         </div>`;
       }
@@ -737,20 +737,13 @@ saveBtn.addEventListener('click', async () => {
 });
 
 // ─── Subir imagen ───
-let uploadTarget = null; // { idx, field }
-
-const fileInput = document.getElementById('file-input');
-
-itemsContainer.addEventListener('click', e => {
-  const btn = e.target.closest('.upload-btn');
-  if (!btn) return;
-  uploadTarget = { idx: parseInt(btn.dataset.idx), field: btn.dataset.field };
-  fileInput.click();
-});
-
-fileInput.addEventListener('change', async () => {
-  const file = fileInput.files[0];
-  if (!file || !uploadTarget) return;
+itemsContainer.addEventListener('change', e => {
+  const input = e.target.closest('.img-picker');
+  if (!input) return;
+  const idx = parseInt(input.dataset.idx);
+  const field = input.dataset.field;
+  const file = input.files[0];
+  if (!file) return;
 
   // Validar tamaño
   if (file.size > 10 * 1024 * 1024) {
@@ -799,7 +792,7 @@ fileInput.addEventListener('change', async () => {
           return;
         }
         const input = document.querySelector(
-          `.item:nth-child(${uploadTarget.idx + 1}) .item-form input[name="${uploadTarget.field}"]`
+          `.item:nth-child(${idx + 1}) .item-form input[name="${field}"]`
         );
         if (input) input.value = data.url;
         showToast('✅ Imagen subida y comprimida');
@@ -813,7 +806,7 @@ fileInput.addEventListener('change', async () => {
     img.src = e.target.result;
   };
   reader.readAsDataURL(file);
-  fileInput.value = '';
+  input.value = '';
 });
 
 // ─── Init ───
