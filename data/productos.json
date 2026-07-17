@@ -15,6 +15,14 @@
       "precio": "10.00",
       "imagen_url": "images/uploads/1784329986609_Captura_de_pantalla_2026-07-17_095253.png",
       "disponible": true
+    },
+    {
+      "id": 3,
+      "nombre": "jaonfka",
+      "descripcion": "afawfwa",
+      "precio": "12",
+      "imagen_url": "images/uploads/1784330020175_Captura_de_pantalla_2026-06-08_213254.png",
+      "disponible": true
     }
   ]
 }
