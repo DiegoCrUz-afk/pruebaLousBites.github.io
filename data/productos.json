@@ -2,30 +2,6 @@
   "lista": [
     {
       "id": null,
-      "nombre": "Churro Bite",
-      "descripcion": "Deliciosa galleta rellena de dulce de leche y espolvoreada con azúcar y canela por encima para darle ese toque caracteristico de churro.",
-      "precio": 10,
-      "imagen_url": "images/uploads/1784328293593_Los_mejores_brownies.png",
-      "disponible": true
-    },
-    {
-      "id": null,
-      "nombre": "",
-      "descripcion": "",
-      "precio": null,
-      "imagen_url": "",
-      "disponible": true
-    },
-    {
-      "id": null,
-      "nombre": "",
-      "descripcion": "",
-      "precio": null,
-      "imagen_url": "",
-      "disponible": true
-    },
-    {
-      "id": null,
       "nombre": "",
       "descripcion": "",
       "precio": null,
