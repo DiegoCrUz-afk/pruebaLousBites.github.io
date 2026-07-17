@@ -7,6 +7,14 @@
       "precio": null,
       "imagen_url": "",
       "disponible": true
+    },
+    {
+      "id": null,
+      "nombre": "Churro Bite",
+      "descripcion": "Galleta con dulce de leche",
+      "precio": 9.78,
+      "imagen_url": "images/uploads/1784328483471_Los_mejores_brownies.png",
+      "disponible": true
     }
   ]
 }
