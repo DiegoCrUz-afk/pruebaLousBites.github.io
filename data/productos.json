@@ -9,11 +9,11 @@
       "disponible": true
     },
     {
-      "id": null,
-      "nombre": "jaonfkaada",
-      "descripcion": "afaf",
-      "precio": "9",
-      "imagen_url": "images/uploads/1784325719190_1000133885.png",
+      "id": 1,
+      "nombre": "Choco Pop Bite",
+      "descripcion": "m&m y chipas de chocolate semi dulces comibanos en un bocado lleno de sabor con nuestra galleta",
+      "precio": "10.00",
+      "imagen_url": "",
       "disponible": true
     }
   ]
