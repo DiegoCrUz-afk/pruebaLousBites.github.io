@@ -23,6 +23,14 @@
       "precio": "10.00",
       "imagen_url": "images/uploads/1784331549066_Los_mejores_brownies__2_.jpg",
       "disponible": true
+    },
+    {
+      "id": 4,
+      "nombre": "Pistacho Bite",
+      "descripcion": "La galleta del momento, rellena de crema de pistacho artesanal, chispas de chocolate blanco y trozos de pistacho encima para darle ese toque especial. ",
+      "precio": "10.00",
+      "imagen_url": "images/uploads/1785457207307_Los_mejores_brownies__3_.jpg",
+      "disponible": true
     }
   ]
 }
